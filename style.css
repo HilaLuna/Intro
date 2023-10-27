@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(hallstatt.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+/* header css başlangıç*/
+.header{
+    background-color: rgb(117, 114, 114, 0.58);
+    display: flex; /*navbar'daki yazıları yatayda hizalıyoruz*/
+    height: 110px; /*başlık kısmındaki yazıların body kısmına göre yüksekliği*/
+    width: 100%;
+    justify-content: space-around; /*navbar'daki yazıları ortaladık
+    ama Udemig başlığından önceki kısma ve Services yazısından sonraki
+    kısma 1 birimlik, orta kısma da 2 birimlik boşluk bıraktık bu etiketle*/
+    align-items: center;
+    position: fixed; /*bununla sayfayı aşağı kaydırsan bile navbar sabit kalıyor*/
+    top: 0; /*yukarda sabit kalmasını sağlıyorsun*/
+}
+.header .title h1{
+    color: aquamarine;
+}
+.header .title h1 span{
+    color: black;
+} /*bu ikisiyle Ude ve Mig'i farklı renk yapabildik*/
+.header .nav ul li{ /*html kısmında 'header' sınıfının içindeki 'nav' sınıfının içindeki 
+    ul'nin içindeki li*/
+    list-style-type: none; /*en başta Home kelimesinin yanında çıkan listeleme noktasını yok etmiş olduk.*/
+}
+.header .nav ul li a{
+    text-decoration: none; /*home, about etc kısımlarının altında çizgi vardı yok ettik*/
+    margin-right: 10px; /*home, about vs kelimelerinin arasını 10 pixel açtık*/
+    color: aqua;
+    font-size: 25px;
+}
+.header .nav ul li a:hover{
+    color: black; /*Home, about kısmının üzerine gelince kelimeler siyah renge dönüşüyor*/
+    cursor: pointer; /*bununla da kelimelerin üzerine gelince el imleci çıkıyor*/
+}
+/*header bitiş*/
+
+/*ana içerik başlangıç css*/
+
+.main {
+    height: 100vh;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.main .info{
+    height: 100%;
+    max-width: 800px; /*alabileceği en yüksek genişlik demek*/
+    text-align: center;
+    display: flex; /*alttaki justify-content, align-item vs yazmadan önce mutlaka display flex özelliğini 
+    vermek lazım, yoksa diğerleri geçerli olmaz*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.main .info h1{
+    color: chocolate;
+}
+.main .info p{
+    color: rgb(233, 230, 230);
+    line-height: 35px;
+    letter-spacing: 1px;
+}
+.main .info p b{
+    color: rgb(249, 189, 189);
+    text-transform: capitalize; /*dersek tüm ilk harfleri büyük yazar*/
+    /*text-transform: uppercase; */
+}
+.main .info button{
+    border: none; /*daha fazlası için kutucuğunun etrafındaki border'ı kaldırdı*/
+    background-color: brown;
+    color: white; /*textin rengi yani 'daha fazlası için' kısmının rengi*/
+    padding: 10px 20px;
+    border-radius: 5px; /*kutucuğun kenarlarının keskinliğini yuvarladı*/
+    cursor: pointer;
+}
+.main .info button:hover{
+    background-color: rgba(165, 42, 42, 0.564);
+    /*font-size: 30px; böyle yaparsak 'daha fazlası için' yazısının üstüne geldiğinde
+    30px büyüyecek yazı */
+}
+
+/*ana içerik bitiş css*/
+
+/*table alanı başlangıç*/
+.table-container{ 
+    width: 80%;
+    margin: 20px auto;
+}
+
+.table-container table{ 
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+th, 
+td{
+    padding: 8px;
+    border: 1px solid gray;
+}
+th{
+    background-color: rgb(110, 103, 103);
+}
+/*table alanı bitiş*/
+
+/*form alanı css başlangıç*/
+.form-container{
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 100px;
+    background-color: #bbbaba;
+}
+
+label{
+    font-weight: bold;
+}
+#ad,
+#email,
+textarea{
+    width: 99%;
+    padding: 10px;
+    border: 1px solid rgb(137, 39, 39);
+    border-radius: 5px;
+}
+
+.btn{
+    background-color: rgb(15, 90, 156);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(185, 227, 227);
+}
+/*form alanı css bitiş*/
+
+/*footer alanı başlangıç*/
+.footer{
+    background-color: #333;
+    color: white;
+    height: 110px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/*footer alanı bitiş*/
+
+/*media sorgusu*/
+
+
+   /* .header{
+        background-color: aquamarine;
+    }*/
+}
